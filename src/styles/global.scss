@@ -1,0 +1,15 @@
+@use "variables.scss" as *;
+@use "normalize.scss" as *;
+
+html,
+body {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  color: rgb($color-white);
+  background: rgb($color-black);
+  font-family: Arial, Helvetica, sans-serif;
+	color-scheme: light;
+}
