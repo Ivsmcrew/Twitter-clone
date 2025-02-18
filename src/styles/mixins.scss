@@ -1,9 +1,10 @@
+@use "sass:map";
 @use "variables.scss" as *;
 
 // Media breakpoint(@include media(md) {...})
 @mixin media($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {

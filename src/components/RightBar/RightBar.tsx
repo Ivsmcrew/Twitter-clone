@@ -1,8 +1,8 @@
 const RightBar = () => {
 	return (
-		<div>
+		<aside>
 			RightBar
-		</div>
+		</aside>
 	)
 }
 

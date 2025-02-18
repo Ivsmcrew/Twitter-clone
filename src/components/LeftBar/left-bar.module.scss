@@ -1,0 +1,138 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.container {
+  height: 100vh;
+  position: sticky;
+  top: $space-0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: $space-4;
+  padding-bottom: $space-12;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  font-size: $size-lg;
+  align-items: center;
+
+	@include media(xxl) {
+		align-items: flex-start;
+	}
+}
+
+.logo {
+  padding: $space-4;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb($color-button-bg);
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.menuItem {
+  padding: $space-4;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: $space-8;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgb($color-button-bg);
+  }
+}
+
+.menuItemText {
+  display: none;
+
+	@include media(xxl) {
+		display: inline;
+	}
+}
+
+.newPostImage {
+  background-color: rgb($color-white);
+  color: rgb($color-black);
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media(xxl) {
+		display: none;
+	}
+}
+
+.newPostText {
+  display: none;
+  background-color: rgb($color-white);
+  color: rgb($color-black);
+  border-radius: 9999px;
+  font-weight: bold;
+  padding: $space-4 $space-16;
+
+	@include media(xxl) {
+		display: block;
+	}
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.name {
+  display: none;
+  flex-direction: column;
+
+	@include media(xxl) {
+		display: flex;
+	}
+}
+
+.nameText {
+  font-weight: bold;
+}
+
+.username {
+  font-size: $size-sm;
+  color: rgb($color-text-gray);
+}
+
+.dots {
+  display: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  @include media(xxl) {
+		display: block;
+	}
+}

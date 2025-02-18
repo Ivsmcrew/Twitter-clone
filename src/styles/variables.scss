@@ -1,12 +1,13 @@
 $color-black: 0 0 0;
 $color-white: 238 237 237;
-$color-text-gray: 113 118 123;
+$color-text-gray: 161 161 161;
 $color-text-gray-light: 231 233 234;
 $color-border-gray: 47 51 54;
 $color-input-gray: 32 35 39;
 $color-icon-blue: 29 155 240;
 $color-icon-green: 0 186 124;
 $color-icon-pink: 249 24 128;
+$color-button-bg: 24 24 24;
 
 $space-0: 0;
 $space-1: 0.125rem;
@@ -24,6 +25,17 @@ $space-12: 2rem;
 $space-13: 2.25rem;
 $space-14: 2.5rem;
 $space-15: 3rem;
+$space-16: 5rem;
+
+$size-2xs: 0.625rem;
+$size-xs: 0.75rem;
+$size-sm: 0.875rem;
+$size-md: 1rem;
+$size-lg: 1.125rem;
+$size-xl: 1.25rem;
+$size-2xl: 1.5rem;
+$size-3xl: 2rem;
+$size-4xl: 3rem;
 
 $width-xsm: 500px;
 $width-sm: 600px;
