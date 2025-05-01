@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Image from "next/image"
 import styles from "./left-bar.module.scss"
+import Image from "../Image";
 
 const menuList = [
   {
@@ -70,7 +70,12 @@ const LeftBar = () => {
 		<aside className={styles.container}>
 			<nav className={styles.navigation}>
 				<Link href="/" className={styles.logo}>
-					<Image src="icons/logo.svg" alt="logo" width={24} height={24} />
+					<Image
+						path="icons/logo.svg"
+						alt="logo"
+						w={24}
+						h={24}
+					/>
         </Link>
 				<menu className={styles.menu}>
 					{menuList.map((item) => (
@@ -80,10 +85,10 @@ const LeftBar = () => {
 								key={item.id}
 							>
 								<Image
-									src={`icons/${item.icon}`}
+									path={`icons/${item.icon}`}
 									alt={item.name}
-									width={24}
-									height={24}
+									w={24}
+									h={24}
 								/>
 								<span className={styles.menuItemText}>
 									{item.name}
@@ -95,7 +100,12 @@ const LeftBar = () => {
           className={styles.newPostImage}
           href="/compose/post"
         >
-          <Image src="icons/post.svg" alt="new post" width={24} height={24} />
+          <Image
+						path="icons/post.svg"
+						alt="new post"
+						w={24}
+						h={24}
+					/>
         </Link>
         <Link
           className={styles.newPostText}
@@ -108,7 +118,13 @@ const LeftBar = () => {
 			<div className={styles.profile}>
         <div className={styles.profileInfo}>
           <div className={styles.avatar}>
-            <Image src="/general/avatar.png" alt="lama dev" fill/>
+            <Image
+							path="/general/avatar.png"
+							alt="lama dev"
+							w={100}
+							h={100}
+							tr={true}
+						/>
           </div>
           <div className={styles.name}>
             <span className={styles.nameText}>Lama Dev</span>

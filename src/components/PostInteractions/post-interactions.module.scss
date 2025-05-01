@@ -1,0 +1,92 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.postInteractions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-8;
+  margin: $space-4 $space-0;
+  color: $color-text-gray;
+
+	@include media(lg) {
+		gap: $space-15;
+	}
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  cursor: pointer;
+
+	&:hover {
+		.commentIcon {
+			fill: $color-icon-blue;
+		}
+		.commentText {
+			color: $color-icon-blue;
+		}
+
+		.repostIcon {
+			fill: $color-icon-green;
+		}
+		.repostText {
+			color: $color-icon-green;
+		}
+
+		.likeIcon {
+			fill: $color-icon-pink;
+		}
+		.likeText {
+			color: $color-icon-pink;
+		}
+	}
+}
+
+.commentIcon,
+.repostIcon,
+.likeIcon {
+  fill: $color-text-gray;
+  transition: fill 0.3s;
+}
+
+.commentText,
+.repostText,
+.likeText {
+  font-size: $size-sm;
+	transition: color 0.3s;
+}
+
+.extraActions {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.actionIcon {
+  cursor: pointer;
+
+	&:hover {
+		.bookmarkIcon {
+			fill: $color-icon-blue;
+		}
+		.shareIcon {
+			fill: $color-icon-blue;
+		}
+	}
+}
+
+.bookmarkIcon,
+.shareIcon {
+  fill: $color-text-gray;
+  transition: fill 0.3s;
+}
+

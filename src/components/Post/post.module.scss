@@ -1,0 +1,72 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.postContainer {
+  padding: $space-8;
+  border-top: 1px solid $color-border-gray;
+  border-bottom: 1px solid $color-border-gray;
+}
+
+.postType {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  font-size: $size-sm;
+  color: $color-text-gray;
+  margin-bottom: $space-4;
+}
+
+.postContent {
+  display: flex;
+  gap: $space-8;
+}
+
+.avatar {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.content {
+	flex: 1 1 0%;
+	display: flex;
+	flex-direction: column;
+	gap: $space-4;
+}
+
+.userInfo {
+	display: flex;
+	align-items: center;
+	gap: $space-4;
+	justify-content: space-between;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  flex-wrap: wrap;
+}
+
+.userName {
+  font-size: $size-md;
+  font-weight: bold;
+}
+
+.userTag {
+  color: $color-text-gray;
+}
+
+.timestamp {
+  color: $color-text-gray;
+}
+
+.sensitive {
+	filter: blur(16px)
+}
+
+.mediaContainer {
+	overflow: hidden;
+}

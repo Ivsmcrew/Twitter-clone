@@ -1,0 +1,32 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.homepage{
+	.nav{
+		display: flex;
+		justify-content: space-between;
+		padding: $space-8 $space-8 $space-0 $space-8;
+		color: $color-text-gray;
+		font-weight: bold;
+		border-bottom: 1px solid $color-border-gray;
+	}
+	.navItem{
+		padding-bottom: $space-6;
+		display: flex;
+		align-items: center;
+
+		&:nth-last-child(-n+3) {
+			display: none;
+		}
+	}
+	.navItemActive {
+		border-bottom: 4px solid $color-icon-blue;
+	}
+
+	@include media(md) {
+		.navItem:nth-last-child(-n+3) {
+			display: flex;
+		}
+	}
+}
+

@@ -1,0 +1,9 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.postInfo {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+}

@@ -48,8 +48,8 @@
 
 .content {
 	flex: 1 1 0%;
-	border-left: 1px solid rgb($color-border-gray);
-	border-right: 1px solid rgb($color-border-gray);
+	border-left: 1px solid $color-border-gray;
+	border-right: 1px solid $color-border-gray;
 
 	@include media(lg) {
 		min-width: $width-sm;

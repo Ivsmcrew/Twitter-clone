@@ -1,0 +1,126 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: $color-black-opacity-75;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: $color-black;
+  border-radius: $space-6;
+  padding: $space-15;
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: $space-12;
+}
+
+.backIcon {
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+  font-size: $size-xl;
+  color: $color-white;
+}
+
+.saveButton {
+  padding: $space-4 $space-8;
+  border-radius: 9999px;
+  background-color: $color-white;
+  color: $color-black;
+  font-weight: bold;
+}
+
+.imageContainer {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+}
+
+.original {
+  height: 100%;
+  object-fit: contain;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.wide {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $size-sm;
+}
+
+.typeSelectors {
+  display: flex;
+  align-items: center;
+  gap: $space-12;
+}
+
+.typeButton {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  cursor: pointer;
+  color: $color-white;
+}
+
+.iconActive {
+  fill: $color-icon-blue;
+}
+
+.iconInactive {
+  fill: $color-text-gray-light;
+}
+
+.sensitiveButton {
+  cursor: pointer;
+  padding: $space-2 $space-8;
+  border-radius: 9999px;
+  font-weight: bold;
+}
+
+.sensitiveActive {
+  background-color: $color-button-bg-red;
+  color: $color-black;
+}
+
+.sensitiveInactive {
+  background-color: $color-white;
+  color: $color-black;
+}
