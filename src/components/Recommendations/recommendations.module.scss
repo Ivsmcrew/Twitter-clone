@@ -1,0 +1,53 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.recommendations {
+  padding: $space-8;
+  border-radius: $space-8;
+  border: 1px solid $color-border-gray;
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.avatarWrapper {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.userName {
+  font-size: $size-md;
+  font-weight: 700;
+}
+
+.userHandle {
+  color: $color-text-gray;
+  font-size: $size-sm;
+}
+
+.followButton {
+  padding: $space-2 $space-8;
+  font-weight: 600;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: 9999px;
+}
+
+.showMoreLink {
+  color: $color-icon-blue;
+}

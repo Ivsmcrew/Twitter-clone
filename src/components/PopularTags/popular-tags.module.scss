@@ -1,0 +1,75 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.container {
+  padding: $space-8;
+  border-radius: $space-8;
+  border: 1px solid $color-border-gray;
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.heading {
+  font-size: $size-xl;
+  font-weight: 700;
+  color: $color-text-gray-light;
+}
+
+.trendEvent {
+  display: flex;
+  gap: $space-8;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  border-radius: $space-6;
+  overflow: hidden;
+}
+
+.eventText {
+  flex: 1;
+}
+
+.eventTitle {
+  font-weight: 700;
+  color: $color-text-gray-light;
+}
+
+.timestamp {
+  font-size: $size-sm;
+  color: $color-text-gray;
+}
+
+.topic {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.topicHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topicCategory {
+  font-size: $size-sm;
+  color: $color-text-gray;
+}
+
+.topicTitle {
+  font-weight: 700;
+  color: $color-text-gray-light;
+}
+
+.topicCount {
+  font-size: $size-sm;
+  color: $color-text-gray;
+}
+
+.link {
+  color: $color-icon-blue;
+}

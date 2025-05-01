@@ -1,0 +1,20 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.search {
+	background-color: $color-input-gray;
+  padding: $space-4 $space-8;
+  display: flex;
+  align-items: center;
+  gap: $space-8;
+  border-radius: 9999px;
+}
+
+.searchInput {
+	background-color: transparent;
+  outline: none;
+
+  &::placeholder {
+    color: $color-text-gray;
+  }
+}
