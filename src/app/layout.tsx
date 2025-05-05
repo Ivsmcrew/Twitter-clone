@@ -6,8 +6,10 @@ import RightBar from "@/components/RightBar";
 
 export default function RootLayout({
   children,
+	modal,
 }: Readonly<{
   children: React.ReactNode;
+	modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -18,6 +20,7 @@ export default function RootLayout({
 					</div>
 					<div className={styles.content}>
 						{children}
+						{modal}
 					</div>
 					<div className={styles.rightBar}>
 						<RightBar />

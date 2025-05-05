@@ -11,6 +11,12 @@
   max-height: 100vh;
 	align-self: start;
 	overflow: auto;
+	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .links {
