@@ -21,12 +21,25 @@
   gap: $space-8;
 }
 
+.postContentStatusType {
+	flex-direction: column;
+}
+
 .avatar {
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.avatarLink {
+	display: flex;
+	gap: $space-4;
+}
+
+.hidden {
+  display: none;
 }
 
 .content {
@@ -50,6 +63,12 @@
   flex-wrap: wrap;
 }
 
+.userDetailsStatusType {
+	flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+
 .userName {
   font-size: $size-md;
   font-weight: bold;
@@ -57,6 +76,10 @@
 
 .userTag {
   color: $color-text-gray;
+}
+
+.userTagStatusType {
+	font-size: $size-sm;
 }
 
 .timestamp {
@@ -69,4 +92,8 @@
 
 .mediaContainer {
 	overflow: hidden;
+}
+
+.largeText {
+	font-size: $size-lg;
 }

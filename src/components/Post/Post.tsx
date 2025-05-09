@@ -1,12 +1,17 @@
 import imagekit from "@/utils/imagekit";
+import cn from "classnames";
+import Link from "next/link";
+
+import { IFileDetailsResponse } from "@/types";
+
 import Image from "../Image";
 import PostInfo from "../PostInfo";
 import PostInteractions from "../PostInteractions";
-import styles from "./post.module.scss";
-import { IFileDetailsResponse } from "@/types";
 import Video from "../Video";
+import styles from "./post.module.scss";
 
-const Post = async () => {
+const Post = async ({type}: {type?: "status" | "comment"}) => {
+	console.log(type)
 	const getFileDetails = (fileId: string): Promise<IFileDetailsResponse> => {
 		return new Promise((resolve, reject) => {
 			imagekit.getFileDetails(fileId, function(error, result) {
@@ -36,31 +41,50 @@ const Post = async () => {
         <span>Lama Dev reposted</span>
       </div>
       {/* POST CONTENT */}
-      <div className={`${styles.postContent}`}>
+      <div className={cn(styles.postContent, { [styles.postContentStatusType]: type === 'status' })}>
         {/* AVATAR */}
-        <div className={`${styles.avatar}`}>
+        <div className={cn(styles.avatar, {[styles.hidden]: type === "status"})}>
           <Image path="general/avatar.png" alt="" w={100} h={100} tr={true} />
         </div>
         {/* CONTENT */}
 				<div className={styles.content}>
-          {/* TOP */}
+					{/* TOP */}
 					<div className={styles.userInfo}>
-						<div className={`${styles.userDetails}`}>
-							<h1 className={styles.username}>Lama Dev</h1>
-							<span className={`${styles.userTag}`}>
-								@lamaWebDev
-							</span>
-							<span className={styles.timestamp}>1 day ago</span>
-						</div>
+						<Link href={`/lamaWebDev`} className={styles.avatarLink}>
+							<div
+								className={cn(styles.avatar, {
+									[styles.hidden]: type !== 'status',
+								})}
+							>
+								<Image
+									path="general/avatar.png"
+									alt=""
+									w={100}
+									h={100}
+									tr={true}
+								/>
+							</div>
+							<div className={cn(styles.userDetails, { [styles.userDetailsStatusType]: type === "status"})}>
+								<h1 className={styles.username}>Lama Dev</h1>
+								<span className={cn(styles.userTag, { [styles.userTagStatusType]: type === "status"})}>
+									@lamaWebDev
+								</span>
+								{type !== "status" && (
+									<span className={styles.timestamp}>1 day ago</span>
+								)}
+							</div>
+						</Link>
 						<PostInfo />
 					</div>
           {/* TEXT & MEDIA */}
-					<p className={styles.largeText}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
-						animi. Laborum commodi aliquam alias molestias odio, ab in,
-						reprehenderit excepturi temporibus, ducimus necessitatibus fugiat
-						iure nam voluptas soluta pariatur inventore.
-					</p>
+					<Link href={`/lamaWebDev/status/123`}>
+						<p className={`${type === "status" && styles.largeText}`}>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+							animi. Laborum commodi aliquam alias molestias odio, ab in,
+							reprehenderit excepturi temporibus, ducimus necessitatibus fugiat
+							iure nam voluptas soluta pariatur inventore.
+						</p>
+					</Link>
           {fileDetails && fileDetails.fileType === "image" ? (
 						<div className={styles.mediaContainer}>
 							<Image
@@ -77,7 +101,9 @@ const Post = async () => {
 							path={fileDetails.filePath}
 						/>
 					)}
-          <span className={styles.timestamp}>8:41 PM · Dec 5, 2024</span>
+					{type === "status" && (
+            <span className={styles.timestamp}>8:41 PM · Dec 5, 2024</span>
+          )}
           <PostInteractions />
         </div>
       </div>

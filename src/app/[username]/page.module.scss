@@ -12,8 +12,8 @@
   position: sticky;
   top: 0;
   padding: $space-8;
+  backdrop-filter: blur(12px);
   z-index: 10;
-  backdrop-filter: blur(6px);
   background-color: $color-black-opacity-50;
 }
 

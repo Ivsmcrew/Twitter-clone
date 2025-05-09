@@ -1,0 +1,22 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.wrapper {
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $space-12;
+  position: sticky;
+  top: 0;
+  padding: $space-8;
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  background-color: $color-black-opacity-50;
+}
+
+.title {
+  font-weight: bold;
+  font-size: $size-lg;
+}

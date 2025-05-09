@@ -1,0 +1,36 @@
+@use "@/styles/mixins.scss" as *;
+@use "@/styles/variables.scss" as *;
+
+.wrapper {}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-8;
+  padding: $space-8;
+}
+
+.avatar {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.input {
+  flex: 1;
+  background-color: transparent;
+  outline: none;
+  padding: $space-4;
+  font-size: $size-xl;
+}
+
+.button {
+  padding: $space-4 $space-8;
+  font-weight: bold;
+  background-color: $color-white;
+  color: $color-black;
+  border-radius: 9999px;
+}

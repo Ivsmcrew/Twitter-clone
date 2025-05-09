@@ -2,7 +2,7 @@ import Post from "../Post"
 
 const Feed = () => {
 	return (
-		<section className=''>
+		<section>
       <Post/>
       <Post/>
       <Post/>
