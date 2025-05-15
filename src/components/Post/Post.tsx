@@ -1,7 +1,7 @@
-import imagekit from "@/utils/imagekit";
 import cn from "classnames";
 import Link from "next/link";
 
+import imagekit from "@/utils/imagekit";
 import { IFileDetailsResponse } from "@/types";
 
 import Image from "../Image";
@@ -11,7 +11,6 @@ import Video from "../Video";
 import styles from "./post.module.scss";
 
 const Post = async ({type}: {type?: "status" | "comment"}) => {
-	console.log(type)
 	const getFileDetails = (fileId: string): Promise<IFileDetailsResponse> => {
 		return new Promise((resolve, reject) => {
 			imagekit.getFileDetails(fileId, function(error, result) {

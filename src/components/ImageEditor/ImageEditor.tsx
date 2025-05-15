@@ -1,7 +1,8 @@
 import { Dispatch, FC, SetStateAction } from "react";
-import styles from "./image-editor.module.scss"
-import { IImageSettings, TImageTypeEnum } from "@/types";
 import Image from "next/image";
+import styles from "./image-editor.module.scss"
+
+import { IImageSettings, TImageTypeEnum } from "@/types";
 
 interface ImageEditorProps {
 	previewURL: string;
@@ -11,7 +12,7 @@ interface ImageEditorProps {
 }
 
 const ImageEditor: FC<ImageEditorProps> = (props) => {
-	const { onClose, previewURL, settings, setSettings} = props;
+	const { previewURL, settings, setSettings, onClose} = props;
 
 	const handleChangeSensitive = (sensitive: boolean) => {
     setSettings((prev) => ({ ...prev, sensitive }));

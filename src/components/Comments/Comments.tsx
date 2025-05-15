@@ -1,6 +1,6 @@
+import styles from "./comments.module.scss"
 import Image from "../Image"
 import Post from "../Post"
-import styles from "./comments.module.scss"
 
 const Comments = () => {
   return (
